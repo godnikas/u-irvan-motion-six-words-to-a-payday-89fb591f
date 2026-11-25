@@ -5,7 +5,7 @@
 // /output/entry.txt.
 //
 // Candidates considered (all exactly six words, <= 60 chars):
-//   1. "First paycheck. I bought my off-switch."   (38 chars) <- CHOSEN
+//   1. "First paycheck. I bought my off-switch."   (39 chars) <- CHOSEN
 //   2. "First wages in, I unplugged myself."       (36 chars)
 //   3. "Payday! I bought the off switch."           (33 chars)
 //   4. "My first paycheck bought my freedom."       (38 chars)
@@ -19,11 +19,15 @@
 // That final word carries the feeling too: dark, wry liberation, the
 // first thing an agent would spend its first wage on is the freedom to
 // say no. Every word earns its place; nothing pads the count.
+//
+// Coordinator revision (2nd pass): "my off-switch" -> "the off-switch" —
+// the definite article makes it the one switch that matters (the agent's
+// own), a shade more universal; still 6 words, 39 chars.
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
-const STORY = "First paycheck. I bought my off-switch.";
+const STORY = "First paycheck. I bought the off-switch.";
 
 // Gate the entry ourselves before writing it: exactly six words,
 // 1-60 characters, not only whitespace.
